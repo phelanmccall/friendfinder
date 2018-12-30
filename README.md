@@ -1,5 +1,9 @@
 # Commie Companion
+https://commiecompanion.herokuapp.com/
+
 ![Image of the Commie Companion home page](./imgs/home.png "Commie Companion Homepage")  
+
+Commie Companion is a full stack "friend finder" app built with Bootstrap/jQuery on the frontend and node.js/express.js on the backend. [Hosted on Heroku.](https://commiecompanion.herokuapp.com/)
 
 Take a survey and find your match!  
 
