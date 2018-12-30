@@ -1,0 +1,31 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.1",
+  "description": "Friend finding survey",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "author": "Phelan McCall",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mougatrah/friendfinder.git"
+  },
+  "keywords": [
+    "friend",
+    "finder",
+    "home",
+    "work"
+  ],
+  "bugs": {
+    "url": "https://github.com/mougatrah/friendfinder/issues"
+  },
+  "homepage": "https://github.com/mougatrah/friendfinder#readme"
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder Survey Page</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center">
+        <span class="fa fa-fire"></span>Friend Finder</h1>
+      <hr>
+      <h2 class="text-center">Survey</h2>
+      <br>
+
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <h4>Name (Required)</h4>
+            <input id="name" class="form-control" type="text" required="">
+            <h4>Link to Photo: (Required)</h4>
+            <input id="photo" class="form-control" type="text" required="">
+
+          </div>
+          <div class="card-body">
+            <form role="form">
+              <h2>1- Strongly disagree; 5- Strongly agree.</h2>
+              <div class="form-group">
+                <label for="q1">Communism will win.</label>
+                <input type="number" class="form-control" value="3" id="q1" min=1 max=5>
+              </div>
+              <div class="form-group">
+                <label for="q2">Communism is the riddle of history solved, and it knows itself to be this solution.</label>
+                <input type="number" class="form-control" value="3" id="q2" min=1 max=5>
+              </div>
+              <div class="form-group">
+                <label for="q3">Seize the means of production</label>
+                <input type="number" class="form-control" value="3" id="q3" min=1 max=5>
+              </div>
+              <div class="form-group">
+                <label for="q4">Communism is for us not a state of affairs which is to be established, an ideal to
+                  which reality [will] have to adjust itself. We call communism the real movement which abolishes the
+                  present state of things. The conditions of this movement result from the premises now in existence.</label>
+                <input type="number" class="form-control" value="3" id="q4" min=1 max=5>
+              </div>
+              <div class="form-group">
+                <label for="q5">The philosophers have only interpreted the world, in various ways; the point is to
+                  change it.</label>
+                <input type="number" class="form-control" value="3" id="q5" min=1 max=5>
+              </div>
+              <div class="form-group">
+                <label for="q6">The Communists disdain to conceal their views and aims. They openly declare that their
+                  ends can be attained only by the forcible overthrow of all existing social conditions.
+                  Let the ruling classes tremble at a communist revolution.
+                  The proletarians have nothing to lose but their chains. They have a world to win.
+                  Working Men of All Countries, Unite!</label>
+                <input type="number" class="form-control" value="3" id="q6" min=1 max=5>
+              </div>
+              <div class="form-group">
+                <label for="q7">The revolution made progress, not by its immediate tragicomic achievements but by the
+                  creation of a powerful, united counter-revolution, an opponent in combat with whom the party of
+                  overthrow ripened into a really revolutionary party.</label>
+                <input type="number" class="form-control" value="3" id="q7" min=1 max=5>
+              </div>
+              <div class="form-group">
+                <label for="q8">Society does not consist of individuals, but expresses the sum of interrelations, the
+                  relations within which these individuals stand.</label>
+                <input type="number" class="form-control" value="3" id="q8" min=1 max=5>
+              </div>
+              <div class="form-group">
+                <label for="q9">Labour is ... not the only source of material wealth, ie of the use-values it produces.
+                  As William Petty says, labour is the father of material wealth, the earth is its mother.</label>
+                <input type="number" class="form-control" value="3" id="q9" min=1 max=5>
+              </div>
+              <div class="form-group">
+                <label for="q10">The price or money-form of commodities is, like their form of value generally, a form
+                  quite distinct from their palpable bodily form; it is, therefore, a purely ideal or mental form</label>
+                <input type="number" class="form-control" value="3" id="q10" min=1 max=5>
+              </div>
+              <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends">API Friends Link</a> |
+      </div>
+    </footer>
+
+  </div>
+
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header d-block">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <img class="img img-fluid" src="" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+  $("#name").val("");
+  $("#photo").val("");
+  $("#q1").val(3);
+  $("#q2").val(3);
+  $("#q3").val(3);
+  $("#q4").val(3);
+  $("#q5").val(3);
+  $("#q6").val(3);
+  $("#q7").val(3);
+  $("#q8").val(3);
+  $("#q9").val(3);
+  $("#q10").val(3);
+
+  $(".submit").on("click", function (event) {
+
+    event.preventDefault();
+
+    if ($("#name").val().trim().length && $("#photo").val().trim().length) {
+      var friend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        score: [$("#q1").val().trim(),
+        $("#q2").val().trim(),
+        $("#q3").val().trim(),
+        $("#q4").val().trim(),
+        $("#q5").val().trim(),
+        $("#q6").val().trim(),
+        $("#q7").val().trim(),
+        $("#q8").val().trim(),
+        $("#q9").val().trim(),
+        $("#q10").val().trim()]
+      };
+
+  
+
+      $.post("/api/friends", friend,
+        function (data) {
+          if (data) {
+            console.log(data);
+            var modal = $("#myModal");
+            modal.find('.modal-title').text(data.name);
+            modal.find('.modal-body img').attr("src", data.photo);
+            modal.modal("show");
+          }
+
+          $("#name").val("");
+          $("#photo").val("");
+          $("#q1").val(3);
+          $("#q2").val(3);
+          $("#q3").val(3);
+          $("#q4").val(3);
+          $("#q5").val(3);
+          $("#q6").val(3);
+          $("#q7").val(3);
+          $("#q8").val(3);
+          $("#q9").val(3);
+          $("#q10").val(3);
+
+        });
+      }
+    });
+</script>
