@@ -193,7 +193,6 @@
       $.post("/api/friends", friend,
         function (data) {
           if (data) {
-            console.log(data);
             var modal = $("#myModal");
             modal.find('.modal-title').text(data.name);
             modal.find('.modal-body img').attr("src", data.photo).attr("alt", data.photo);
