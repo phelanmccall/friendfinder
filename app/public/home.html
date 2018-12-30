@@ -2,32 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tables Page</title>
+  <title>Commie Companion Home Page</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">  <script src="https://code.jquery.com/jquery.js"></script>
 
 </head>
-<body>
+
+<body class="bg-danger">
 
   <div class="container">
 
-    <div class="jumbotron">
-      <h1 class="text-center"><span class="fa fa-fire"></span> Friend Finder</h1>
+    <div class="jumbotron mt-5 bg-warning">
+      <h1 class="text-center">
+        <a class="text-dark" href="/"><i class="fa fa-closed-captioning"></i> Commie Companion</a> </h1>
       <hr>
       <h2 class="text-center"> Take our friend finding survey!</h2>
       <br>
 
       <div class="text-center">
-        <a href="/survey"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Take Survey!</button></a>
+        <a href="/survey"><button class="btn btn-lg btn-dark"><span class="fa fa-list-alt"></span> Take Survey!</button></a>
       </div>
 
     </div>
 
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends"> API Friends Link</a>
+        <a href="/api/friends" class="text-dark">API companions link</a>
       </div>
     </footer>
 

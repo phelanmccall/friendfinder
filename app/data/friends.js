@@ -14,6 +14,22 @@ var friendsArray = [
             5,
             5
         ]
+    },
+    {
+        name: "Harry Truman",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/5/52/Harry_S_Truman%2C_bw_half-length_photo_portrait%2C_facing_front%2C_1945-crop.jpg",
+        score: [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ]
     }
 ];
 
